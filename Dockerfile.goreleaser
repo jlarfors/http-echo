@@ -8,4 +8,3 @@ COPY http-echo /http-echo
 USER nonroot:nonroot
 
 ENTRYPOINT ["/http-echo"]
-CMD ["--help"]
