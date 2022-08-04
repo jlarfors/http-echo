@@ -10,7 +10,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/hashicorp/http-echo/version"
+	"github.com/verifa/http-echo/version"
 )
 
 var (
@@ -28,7 +28,7 @@ func main() {
 
 	// Asking for the version?
 	if *versionFlag {
-		fmt.Fprintln(stderrW, version.HumanVersion)
+		fmt.Fprintf(stderrW, "Version: %s\nCommit: %s\nDate: %s\n", version.Version, version.Commit, version.Date)
 		os.Exit(0)
 	}
 

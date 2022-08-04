@@ -1,3 +1,3 @@
-module github.com/hashicorp/http-echo
+module github.com/verifa/http-echo
 
-go 1.17
+go 1.18
