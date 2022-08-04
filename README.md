@@ -16,10 +16,12 @@ brew install verifa/tap/http-echo
 ### Docker
 
 ```bash
-docker run verifa/http-echo -env ECHO_TEXT='hello world!'
+docker pull verifa/http-echo
 ```
 
-The default port is 5678, but this is configurable via the `-listen` flag or `ECHO_TEXT` environment variable:
+## Usage
+
+The default port is 5678, but this is configurable via the `-listen` flag.
 
 ```bash
 # Using -listen flag
@@ -27,6 +29,9 @@ http-echo -listen=:8080 -text="hello world"
 
 # Using ECHO_TEXT env var
 ECHO_TEXT="hello world" http-echo -listen=:8080
+
+# Using Docker
+docker run -e ECHO_TEXT='hello world!' -p 8080:8080 verifa/http-echo -listen :8080
 ```
 
 Then visit <http://localhost:8080/> in your browser.
